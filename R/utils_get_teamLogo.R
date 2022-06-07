@@ -9,6 +9,7 @@ get_teamLogo <- function(){
   temporary_dataset <-
     hoopR::load_nba_team_box(season = 2022) %>%
     distinct(team_abbreviation,
+             team_display_name,
              team_logo) %>%
     arrange(team_abbreviation) %>%
     select(team_abbreviation, everything())
